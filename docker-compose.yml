@@ -1,0 +1,12 @@
+version: "2"
+services:
+  app-frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: "name_app"
+    volumes:
+      - ".:/usr/src/app"
+      - "/usr/src/app/node_modules"
+    ports:
+      - 4200:4200
